@@ -68,7 +68,7 @@ export function CodeBlock({ language, code, className }: DarkCodeBlockProps) {
         <span className="text-zinc-400 text-sm ">{language}</span>
         <button
           onClick={copyToClipboard}
-          className="p-1.5 rounded hover:bg-transparent transition-opacity hover:opacity-70 cursor-pointer"
+          className="p-2 rounded hover:bg-transparent transition-opacity hover:opacity-70 cursor-pointer"
           aria-label="Copy code"
         >
           {copied ? <Check className="h-3 w-3 text-green-600" /> : <Copy className="h-3 w-3 text-zinc-400" />}

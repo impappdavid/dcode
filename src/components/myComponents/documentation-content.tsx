@@ -40,6 +40,61 @@ let y = x + 2;
           "Up-to-date: If you change the code, update the comment too.",
         ],
       },
+      let: {
+        title: "Let",
+        description: "Good use of let shows that a variable’s value will change later. It’s clearer than var and safer, because it only exists inside the block where it’s defined.",
+        syntax: `let variableName;
+let variableName = value;
+let variableNameA, variableNameB;`,
+        parameters: [{ name: "variableName", description: "Usually written in camelCase. It should describe what the variable stores." }, { name: "value", description: "The initial value assigned to the variable. It can be a string, number, boolean, array, object, etc." },],
+        returnValue: "",
+        examples: [
+          {
+            title: "Declare with an initial value",
+            code: `let apple = 10; // Declares and sets the value immediately`,
+          },
+          {
+            title: "Declare without a value",
+            code: `// Declares a variable without setting a value (undefined for now)
+let clicks;
+clicks = 10; // You can assign a value later`,
+          },
+          {
+            title: "Declare multiple variables",
+            code: `let a, b, c; // Declares three variables
+a = 1;
+b = 2;
+c = 3;`,
+          },
+          {
+            title: "Block Scope",
+            code: `function demoBlockScope() {
+  if (true) {
+    let blockScopedVariable = "I am inside the block";
+    console.log(blockScopedVariable); // Works fine inside the block
+  }
+
+  // Outside the block
+  console.log(blockScopedVariable); // Error: blockScopedVariable is not defined
+}
+
+demoBlockScope();`,
+          },
+          {
+            title: "Cannot redeclare",
+            code: `let x = 5;
+let x = 10;  // Error: Cannot redeclare block-scoped variable 'x'`,
+          },
+          
+          
+        ],
+        notes: [
+          "Block-scoped: Variables declared with let are limited to the block (enclosed by curly braces {}) in which they are defined. This makes let safer than var, which is function-scoped.",
+          "Reassignable: You can assign new values to a let variable after its initial declaration.",
+          "No Hoisting: Unlike var, let is not hoisted to the top of its scope. It will result in a ReferenceError if you try to access it before declaring.",
+        
+        ],
+      },
     },
     arrays: {
 
