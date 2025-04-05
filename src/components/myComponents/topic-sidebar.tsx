@@ -17,7 +17,7 @@ const topicsAndMethods: Record<string, { topic: string; methods: { id: string; n
                 { id: "comments", name: "Comments", date:"Apr 04, 2025" },
                 { id: "let", name: "let", date:"Apr 04, 2025"},
                 { id: "var", name: "var", date:"Apr 04, 2025"},
-                { id: "const", name: "const", date:"Apr 04, 2025" },
+                { id: "const", name: "const", date:"Apr 05, 2025" },
                 { id: "typeof", name: "typeof", date:"Apr 04, 2025" },
                 { id: "ifelse", name: "If Else", date:"Apr 04, 2025" },
                 { id: "switch", name: "Switch", date:"Apr 04, 2025" },
